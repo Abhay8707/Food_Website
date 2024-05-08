@@ -1,24 +1,15 @@
-import logo from './logo.svg';
+import { CssBaseline, ThemeProvider } from '@mui/material';
 import './App.css';
+import { darkTheme } from './Theme/DarkTheme';
+import Homepage from './Coustmer/Pages/HomePage/Homepage';
+import { Routers } from './Routers/Routers';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={darkTheme}>
+      <CssBaseline/>
+      <Routers/>
+    </ThemeProvider>
   );
 }
 
